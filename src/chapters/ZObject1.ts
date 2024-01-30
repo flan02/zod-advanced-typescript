@@ -111,3 +111,16 @@ const partialProduct2 = z.object({
 // TODO Required oppossite to Partial
 
 const requiredProduct = ProductSchema.required() // converts every props to required props
+const requiredProductParams = ProductExtend.required({ price: true }) // converts params props to required props
+
+try {
+  requiredProduct.parse({}) // Throws error
+} catch (err) {
+  console.log(err); // Error: Missing property "name" and "price"
+}
+
+try {
+  requiredProductParams.parse({ name: 'Apple' }) // Throws error
+} catch (err) {
+  console.log(err); // Error: Missing property "price"
+}
