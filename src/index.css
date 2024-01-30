@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* * Custom CSS */
+@layer components {
+    .card {
+        @apply bg-red-500 w-40 h-40 grid place-content-center rounded-lg text-white font-bold border-2 border-red-600 text-4xl;
+    }
+    .card2 {
+        @apply bg-blue-400 grid place-content-center rounded-lg text-white font-bold border-2 border-blue-500 text-4xl;
+    }
+}
